@@ -1,7 +1,20 @@
 const mongoose = require("mongoose")
 require("dotenv").config()
-const connection = mongoose.connect(process.env.mongoUrl)
+// const mongoURI = 'your-mongodb-atlas-connection-string';
 
-module.exports = {
-    connection,
-};
+mongoose.connect("mongodb+srv://pazhani:Bluegreen1!!!@cluster0.2awztuf.mongodb.net/", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
+    .then(() => {
+      console.log('Connected to MongoDB Atlas');
+    })
+    .catch(error => {
+      console.error('Error connecting to MongoDB Atlas:', error);
+    });
+  
+// module.exports = {
+//     connection,
+// };
+
+module.exports = mongoose.connection;
