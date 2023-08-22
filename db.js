@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 require("dotenv").config()
 // const mongoURI = 'your-mongodb-atlas-connection-string';
 
-mongoose.connect("mongodb+srv://pazhani:Bluegreen1!!!@cluster0.2awztuf.mongodb.net/", {
+mongoose.connect("mongodb+srv://pazhani:Bluegreen1!!!@cluster0.2awztuf.mongodb.net/noteapp?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
